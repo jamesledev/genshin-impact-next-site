@@ -1,65 +1,181 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div>
+      <div className="wholeBox">
+        <div className="background">
+          <div style="display: flex;">
+            <h1 className="title">
+              Genshin Impact plan!
+              <img className="paimon2" src="/moreImages/picture.jpg" />
+            </h1>
+          </div>
+          <div className="myWeapon">
+            Current Weapon: <textarea className="weaponText"></textarea>
+          </div>
         </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <main>
+          <div className="mainContainer">
+            <div className="mainBox parent">
+              <div className="myFlower draggable border" data-artifact="flower">
+                <div
+                  className="preText"
+                  contentEditable="true"
+                  data-texting="Current Flower"
+                ></div>
+              </div>
+              <div className="myPlume draggable border" data-artifact="plume">
+                <div
+                  className="preText"
+                  contentEditable="true"
+                  data-texting="Current Plume"
+                ></div>
+              </div>
+              <div className="mySands draggable border" data-artifact="sands">
+                <div
+                  className="preText"
+                  contentEditable="true"
+                  data-texting="Current Sandstorm"
+                ></div>
+              </div>
+              <div className="myGoblet draggable border" data-artifact="goblet">
+                <div
+                  className="preText"
+                  contentEditable="true"
+                  data-texting="Current Golbet"
+                ></div>
+              </div>
+              <div
+                className="myCirclet draggable border"
+                data-artifact="circlet"
+              >
+                <div
+                  className="preText"
+                  contentEditable="true"
+                  data-texting="Current Circlet"
+                ></div>
+              </div>
+              <div className="flower draggable  border" data-artifact="flower">
+                <div
+                  className="preText"
+                  contentEditable="true"
+                  data-texting="Desired Flower"
+                ></div>
+              </div>
+              <div className="plume draggable border" data-artifact="plume">
+                <div
+                  className="preText"
+                  contentEditable="true"
+                  data-texting="Desired Plume"
+                ></div>
+              </div>
+              <div className="sands draggable border" data-artifact="sands">
+                <div
+                  className="preText"
+                  contentEditable="true"
+                  data-texting="Desired Sandstorm"
+                ></div>
+              </div>
+              <div className="goblet draggable border" data-artifact="goblet">
+                <div
+                  className="preText"
+                  contentEditable="true"
+                  data-texting="Desired Golbet"
+                ></div>
+              </div>
+              <div className="circlet draggable border" data-artifact="circlet">
+                <div
+                  className="preText"
+                  contentEditable="true"
+                  data-texting="Desired Circlet"
+                ></div>
+              </div>
+
+              <div className="flowerText border">
+                <textarea className="textBoxSize textBox" rows="5">
+                  Main Stat:
+                </textarea>
+              </div>
+              <div className="plumeText border">
+                <textarea className="textBoxSize textBox" rows="5">
+                  Main Stat:
+                </textarea>
+              </div>
+              <div className="sandsText border">
+                <textarea className="textBoxSize textBox" rows="5">
+                  Main Stat:
+                </textarea>
+              </div>
+              <div className="gobletText border">
+                <textarea className="textBoxSize textBox" rows="5">
+                  Main Stat:
+                </textarea>
+              </div>
+              <div className="circletText border">
+                <textarea className="textBoxSize textBox" rows="5">
+                  Main Stat:
+                </textarea>
+              </div>
+
+              <div className="tickbox1 center border">
+                <input type="checkbox" className="checkBox" />
+              </div>
+              <div className="tickbox2 center border">
+                <input type="checkbox" className="checkBox" />
+              </div>
+              <div className="tickbox3 center border">
+                <input type="checkbox" className="checkBox" />
+              </div>
+              <div className="tickbox4 center border">
+                <input type="checkbox" className="checkBox" />
+              </div>
+              <div className="tickbox5  center border">
+                <input type="checkbox" className="checkBox" />
+              </div>
+
+              <div className="artifactImgs draggableTwo border child2">
+                {/* {{#each imgNames}} */}
+                <div
+                  className="artifactImgBox"
+                  data-artifact="{{this.artifactType}}"
+                >
+                  {{ artifactSet }}
+                  <img src="/images/{{this.file}}" className="artifactImg" />
+                </div>
+                {/* {{/each}} */}
+              </div>
+            </div>
+            <div style="padding: 20px">
+              <button className="clear btn border">Clear</button>
+            </div>
+            <div className="apiBox">
+              <div className="gridarea">
+                <label for="chars">
+                  Recommended Build:
+                  <br />
+                  Select a character!:
+                </label>
+                <select
+                  name="chars"
+                  onchange=" myFunction()"
+                  className="charName"
+                >
+                  {/* {{#each characterNames}} */}
+                  {/* <option value={{ this }}>{{ this }}</option> */}
+                  {/* {{/each}} */}
+                </select>
+              </div>
+              <div className="weaponReco gridareab"></div>
+              <div className="artiSetApi gridareac"></div>
+              <div className="sgcApi gridaread"></div>
+              <div className="substatsApi gridareae"></div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
-  )
+  );
 }
