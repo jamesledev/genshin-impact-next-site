@@ -1,14 +1,19 @@
-export const GoogleSheets = () => {
+function myFunction() {
+  console.log('osdkfods');
+}
+
+export default function GoogleSheets(attributes) {
+  console.log(attributes);
   return (
-    <div>
+    <>
       <div className="apiBox">
         <div className="gridarea">
-          <label for="chars">
+          <label htmlFor="chars">
             Recommended Build:
             <br />
             Select a character!:
           </label>
-          <select name="chars" onchange=" myFunction()" className="charName">
+          <select name="chars" onChange={myFunction} className="charName">
             {/* {{#each characterNames}} */}
             {/* <option value={{ this }}>{{ this }}</option> */}
             {/* {{/each}} */}
@@ -19,6 +24,6 @@ export const GoogleSheets = () => {
         <div className="sgcApi gridaread"></div>
         <div className="substatsApi gridareae"></div>
       </div>
-    </div>
+    </>
   );
-};
+}

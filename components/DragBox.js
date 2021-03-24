@@ -1,6 +1,6 @@
 import TextArea from '../components/TextArea';
 
-export const Dragbox = () => {
+export default function Dragbox() {
   return (
     <>
       <div className="mainContainer">
@@ -97,4 +97,4 @@ export const Dragbox = () => {
       </div>
     </>
   );
-};
+}
