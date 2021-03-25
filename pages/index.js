@@ -26,7 +26,6 @@ export async function getServerSideProps() {
 
 export default function Home(props) {
   const { characterDeet } = props.genshinObject;
-  // const { characterNames } = props.genshinObject;
 
   return (
     <div>
@@ -45,10 +44,7 @@ export default function Home(props) {
 
         <main>{/* <Dragbox /> */}</main>
 
-        <GoogleSheets
-          characterDeets={characterDeet}
-          // characterNames={characterNames}
-        />
+        <GoogleSheets characterDeets={characterDeet} />
       </div>
     </div>
   );

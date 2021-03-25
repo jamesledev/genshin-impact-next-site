@@ -1,16 +1,32 @@
-function myFunction() {
-  console.log('osdkfods');
+function disaplayCharacterData(event, characterDetails) {
+  const characterName = event.target.value;
+  console.log(characterDetails[characterName]);
+  const selectedCharacter = characterDetails[characterName];
+
+  document.querySelector('.weaponReco').innerHTML =
+    "<div class='fontColor'>Recommended Weapons: </div>" +
+    selectedCharacter.weapon;
+  document.querySelector('.artiSetApi').innerHTML =
+    "<div class='fontColor'>Recommended Artifact Sets: </div>" +
+    selectedCharacter.arti;
+  document.querySelector('.sgcApi').innerHTML =
+    "<div class='fontColor'>Recommended SGC Stats: </div>" +
+    selectedCharacter.sgc;
+  document.querySelector('.substatsApi').innerHTML =
+    "<div class='fontColor'>Recommended Substats: </div>" +
+    selectedCharacter.substat;
 }
-
-export default function GoogleSheets(atributes) {
-  console.log(atributes);
-
-  // for (var i = 0; i < atributes.characterNames.length; i++) {
-  //   const { charNameList } = atributes.characterNames[i];
-  //   console.log(charNameList);
-  // }
-
-  const { name, arti, sgc, substat, weapon } = atributes;
+function displayNames(characterDeets) {
+  return Object.keys(characterDeets).map((character) => {
+    return (
+      <option key={character} value={character}>
+        {character}
+      </option>
+    );
+  });
+}
+export default function GoogleSheets(attributes) {
+  const { characterDeets } = attributes;
 
   return (
     <>
@@ -21,8 +37,15 @@ export default function GoogleSheets(atributes) {
             <br />
             Select a character!:
           </label>
-          <select name="chars" onChange={myFunction} className="charName">
-            <option>{name}</option>
+          <select
+            id="chars"
+            name="chars"
+            onChange={(e) => {
+              disaplayCharacterData(e, characterDeets);
+            }}
+            className="charName"
+          >
+            {displayNames(characterDeets)}
           </select>
         </div>
         <div className="weaponReco gridareab">Recommended Weapons: </div>
