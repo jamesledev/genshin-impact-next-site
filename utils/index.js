@@ -1,4 +1,5 @@
 import fs from 'fs';
+
 export function forLoop(response) {
   const characterDeet = {};
   const characterNames = [];
@@ -27,6 +28,7 @@ export function forLoop(response) {
   }
   return { characterDeet, characterNames };
 }
+
 export function imgNameGetter(directory) {
   const files = fs.readdirSync(directory);
   const artifactImages = [];

@@ -1,10 +1,10 @@
-import Head from 'next/head';
 // import styles from '../styles/Home.module.css';
+import axios from 'axios';
+
+import { forLoop, imgNameGetter } from '../utils/';
 
 import Dragbox from '../components/DragBox';
 import GoogleSheets from '../components/GoogleSheets';
-import axios from 'axios';
-import { forLoop, imgNameGetter } from '../utils/';
 
 export async function getServerSideProps() {
   const url =
@@ -19,16 +19,15 @@ export async function getServerSideProps() {
     chracterNamestString: JSON.stringify(characterNames),
     imgNames,
   };
-  console.log(genshinObject);
   return {
     props: { genshinObject }, // will be passed to the page component as props
   };
 }
 
 export default function Home(props) {
-  console.log(props);
-
   const { characterDeet } = props.genshinObject;
+  // const { characterNames } = props.genshinObject;
+
   return (
     <div>
       <div className="wholeBox">
@@ -46,7 +45,10 @@ export default function Home(props) {
 
         <main>{/* <Dragbox /> */}</main>
 
-        <GoogleSheets attribute={characterDeet} />
+        <GoogleSheets
+          characterDeets={characterDeet}
+          // characterNames={characterNames}
+        />
       </div>
     </div>
   );
