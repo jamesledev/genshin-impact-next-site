@@ -1,9 +1,30 @@
-import TextArea from '../components/TextArea';
+import Draggable from 'react-draggable';
 
-export const Dragbox = () => {
+import TextArea from './TextArea';
+
+// function displayNames(imgNames) {
+//   return Object.keys(imgNames).map((file) => {
+//     return <img src={`/images/${file}.jpg`}></img>;
+//   });
+// }
+
+function displayImages(imageDeets) {
+  for (var i = 0; i < imageDeets.length; i++) {
+    const fileName = imageDeets[i].file;
+    console.log(fileName);
+    return <img src={`/images/${fileName}`}></img>;
+  }
+}
+
+export default function Drag(attributes) {
+  const { imgDeets } = attributes;
+  // console.log(imgDeets);
+  displayImages(imgDeets);
   return (
     <>
-      <div className="mainContainer">
+      {displayImages(imgDeets)}
+
+      {/* <div className="mainContainer">
         <div className="mainBox parent">
           <div className="myFlower draggable border" data-artifact="flower">
             <div
@@ -79,22 +100,17 @@ export const Dragbox = () => {
           <TextArea />
 
           <div className="artifactImgs draggableTwo border child2">
-            {/* {{#each imgNames}} */}
             <div
               className="artifactImgBox"
               data-artifact="{{this.artifactType}}"
-            >
-              {{ artifactSet }}
-              <img src="/images/{{this.file}}" className="artifactImg" />
-            </div>
-            {/* {{/each}} */}
+            ></div>
           </div>
         </div>
 
-        <div style="padding: 20px">
+        <div>
           <button className="clear btn border">Clear</button>
         </div>
-      </div>
+      </div> */}
     </>
   );
-};
+}
