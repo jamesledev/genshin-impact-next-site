@@ -1,6 +1,5 @@
 function disaplayCharacterData(event, characterDetails) {
   const characterName = event.target.value;
-  console.log(characterDetails[characterName]);
   const selectedCharacter = characterDetails[characterName];
 
   document.querySelector('.weaponReco').innerHTML =
@@ -16,6 +15,7 @@ function disaplayCharacterData(event, characterDetails) {
     "<div class='fontColor'>Recommended Substats: </div>" +
     selectedCharacter.substat;
 }
+
 function displayNames(characterDeets) {
   return Object.keys(characterDeets).map((character) => {
     return (

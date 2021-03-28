@@ -2,29 +2,39 @@ export default function TextArea() {
   return (
     <>
       <div className="flowerText border">
-        <textarea className="textBoxSize textBox" rows="5">
-          Main Stat:
-        </textarea>
+        <textarea
+          className="textBoxSize textBox"
+          rows="5"
+          defaultValue="Main Stat:"
+        ></textarea>
       </div>
       <div className="plumeText border">
-        <textarea className="textBoxSize textBox" rows="5">
-          Main Stat:
-        </textarea>
+        <textarea
+          className="textBoxSize textBox"
+          rows="5"
+          defaultValue="Main Stat:"
+        ></textarea>
       </div>
       <div className="sandsText border">
-        <textarea className="textBoxSize textBox" rows="5">
-          Main Stat:
-        </textarea>
+        <textarea
+          className="textBoxSize textBox"
+          rows="5"
+          defaultValue="Main Stat:"
+        ></textarea>
       </div>
       <div className="gobletText border">
-        <textarea className="textBoxSize textBox" rows="5">
-          Main Stat:
-        </textarea>
+        <textarea
+          className="textBoxSize textBox"
+          rows="5"
+          defaultValue="Main Stat:"
+        ></textarea>
       </div>
       <div className="circletText border">
-        <textarea className="textBoxSize textBox" rows="5">
-          Main Stat:
-        </textarea>
+        <textarea
+          className="textBoxSize textBox"
+          rows="5"
+          defaultValue="Main Stat:"
+        ></textarea>
       </div>
 
       <div className="tickbox1 center border">

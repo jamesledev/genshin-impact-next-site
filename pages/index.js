@@ -2,9 +2,8 @@
 import axios from 'axios';
 
 import { forLoop, imgNameGetter } from '../utils/';
-
-import Dragbox from '../components/DragBox';
 import GoogleSheets from '../components/GoogleSheets';
+import Drag from '../components/Drag';
 
 export async function getServerSideProps() {
   const url =
@@ -25,24 +24,23 @@ export async function getServerSideProps() {
 }
 
 export default function Home(props) {
-  const { characterDeet } = props.genshinObject;
+  const { characterDeet, imgNames } = props.genshinObject;
 
   return (
     <div>
       <div className="wholeBox">
         <div className="background">
           <div>
-            <h1 className="title">
-              Genshin Impact plan!
-              <img className="paimon2" src="/moreImages/picture.jpg" />
-            </h1>
+            <h1 className="title">Genshin Impact plan!</h1>
           </div>
           <div className="myWeapon">
             Current Weapon: <textarea className="weaponText"></textarea>
           </div>
         </div>
 
-        <main>{/* <Dragbox /> */}</main>
+        <main>
+          <Drag imgNames={imgNames} />
+        </main>
 
         <GoogleSheets characterDeets={characterDeet} />
       </div>

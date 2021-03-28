@@ -1,6 +1,12 @@
-import TextArea from '../components/TextArea';
+import Draggable from 'react-draggable';
 
-export default function Dragbox() {
+import TextArea from './TextArea';
+import DestinationSlots from './DestinationSlots';
+export default function Drag(attributes) {
+  console.log(attributes);
+
+  const myFlower = ['myFlower', 'Current Flower'];
+
   return (
     <>
       <div className="mainContainer">
@@ -79,19 +85,14 @@ export default function Dragbox() {
           <TextArea />
 
           <div className="artifactImgs draggableTwo border child2">
-            {/* {{#each imgNames}} */}
             <div
               className="artifactImgBox"
               data-artifact="{{this.artifactType}}"
-            >
-              {{ artifactSet }}
-              <img src="/images/{{this.file}}" className="artifactImg" />
-            </div>
-            {/* {{/each}} */}
+            ></div>
           </div>
         </div>
 
-        <div style="padding: 20px">
+        <div>
           <button className="clear btn border">Clear</button>
         </div>
       </div>
