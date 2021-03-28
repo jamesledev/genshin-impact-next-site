@@ -39,7 +39,7 @@ export default function Home(props) {
         </div>
 
         <main>
-          <Drag imgNames={imgNames} />
+          <Drag imgDeets={imgNames} />
         </main>
 
         <GoogleSheets characterDeets={characterDeet} />

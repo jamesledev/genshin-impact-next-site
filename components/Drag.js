@@ -1,15 +1,30 @@
 import Draggable from 'react-draggable';
 
 import TextArea from './TextArea';
-import DestinationSlots from './DestinationSlots';
+
+// function displayNames(imgNames) {
+//   return Object.keys(imgNames).map((file) => {
+//     return <img src={`/images/${file}.jpg`}></img>;
+//   });
+// }
+
+function displayImages(imageDeets) {
+  for (var i = 0; i < imageDeets.length; i++) {
+    const fileName = imageDeets[i].file;
+    console.log(fileName);
+    return <img src={`/images/${fileName}`}></img>;
+  }
+}
+
 export default function Drag(attributes) {
-  console.log(attributes);
-
-  const myFlower = ['myFlower', 'Current Flower'];
-
+  const { imgDeets } = attributes;
+  // console.log(imgDeets);
+  displayImages(imgDeets);
   return (
     <>
-      <div className="mainContainer">
+      {displayImages(imgDeets)}
+
+      {/* <div className="mainContainer">
         <div className="mainBox parent">
           <div className="myFlower draggable border" data-artifact="flower">
             <div
@@ -95,7 +110,7 @@ export default function Drag(attributes) {
         <div>
           <button className="clear btn border">Clear</button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

@@ -27,7 +27,6 @@ function displayNames(characterDeets) {
 }
 export default function GoogleSheets(attributes) {
   const { characterDeets } = attributes;
-
   return (
     <>
       <div className="apiBox">
